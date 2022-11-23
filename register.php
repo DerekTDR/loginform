@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
     require_once('config.php');
     require_once('class/User.class.php');
@@ -10,5 +11,7 @@ if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
     } else {
         echo "Błąd rejestracji użytkownika";
     }
+} else {
+    $twig->display("register.html.twig");
 }
 ?>
