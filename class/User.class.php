@@ -18,8 +18,7 @@ class User {
         $passwordHash = password_hash($this->password, PASSWORD_ARGON2I);
         $query = "INSERT INTO user VALUES (NULL, ?, ?, ?, ?)";
         $preparedQuery = $this->db->prepare($query); 
-        $preparedQuery->bind_param('ssss', $this->login, $passwordHash, 
-                                            $this->firstName, $this->lastName);
+        $preparedQuery->bind_param('ssss', $this->login, $passwordHash, $this->firstName, $this->lastName);
         $result = $preparedQuery->execute();
         return $result;
     }
