@@ -1,5 +1,5 @@
-{% include 'head.html.twig' %}
-    <form action="" method="post">
+{% include 'header.html.twig' %}
+<form action="" method="post">
         <label for="loginID">Login:</label><br>
         <input type="text" name="login" id="loginID"><br>
         <label for="passwordID">Hasło:</label><br>
@@ -10,4 +10,5 @@
         <input type="text" name="lastName" id="lastNameID"><br>
         <input type="submit" value="Rejestruj">
     </form>
-{% include 'foot.html.twig' %}
+    {{message}}
+{% include 'footer.html.twig' %} 
